@@ -14,3 +14,8 @@ class BaseDao:
     def buscar_por_id(self, comando_sql_buscar_id):
         self.cursor.execute(comando_sql_buscar_id)
         return self.cursor.fetchone()
+
+    def listar(self, comando_sql_listar):
+        self.cursor.execute(comando_sql_listar)
+        for p in self.cursor.fetchall():
+            print(f'PRODUTO: {p[0].capitalize()} - PREÇO R$ {p[1]} - TIPO : {p[2]}')
