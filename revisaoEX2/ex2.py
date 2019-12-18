@@ -64,6 +64,29 @@ for i in lista[4][2]:
         inserir = dao.inserir_legumes(produtos.legumes,produtos.preco)
     
     v += 1
-    
 
+def listar_tipo(produtos):
+    while True:
+        print('BEM VINDO, selecione a opcao desejada')
+        print('1 = Frutas')
+        print('2 = Legumes')
+        print('3 = Verduras')
+        opcao = int(input())
+        if opcao == 1:
+            print(produtos.listar(opcao))
+            print()
+        elif opcao == 2:
+            print(produtos.listar(opcao))
+            print()
+        elif opcao == 3:
+            print(produtos.listar(opcao))
+            print()
+        else:
+            break
+        
+
+
+
+listar_tipo(dao)
+            
 
